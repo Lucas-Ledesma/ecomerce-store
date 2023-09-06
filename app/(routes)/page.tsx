@@ -8,9 +8,8 @@ import getBillboards from "@/actions/get-billboards";
 export const revalidate = 0;
 
 const HomePage = async () => {
-  const billboards = await getBillboards();
   const products = await getProducts({ isFeatured: true });
-  const billboard = await getBillboard(billboards[0].id);
+  const billboard = await getBillboard('e028279c-bfc3-410b-836e-adf21f9c8794');
 
   return (
     <Container>
